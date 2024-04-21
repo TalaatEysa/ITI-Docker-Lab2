@@ -3,7 +3,7 @@
 ## Task 1: Run a container using nginx image, and mount a directory from your host into the Docker container. 
 ### example: /home/samy/nginx:/home/nginx (bind mount)
 
-#### 1-crate a directory and file iti.txt in it 
+#### 1-create a directory and file iti.txt in it 
 ```bash
 mkdir nginx_bindMount
 cd nginx_bindMount/
