@@ -71,12 +71,15 @@ the ping is successful because the two containers are in the same networks.
 
 ## Task 3 Explain the difference between Docker volumes and Bind Mount.Explain the difference between Docker volumes and Bind Mount.
 
+
 ### Docker volumes
 #### 1-It is stored within a directory on the Docker host.
 #### 2-Managed by Docker and are isolated from the core
 #### 3-functionality of the host machine.
 #### 4-Can be mounted into multiple containers simultaneously.
 #### 5-Deleting a container does not delete the volume
+
+
 
 ### Bind Mount
 #### 1- Bind mounts have limited functionality compared to volumes.
