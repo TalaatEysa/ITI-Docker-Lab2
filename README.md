@@ -2,6 +2,7 @@
 
 ## Task 1: Run a container using nginx image, and mount a directory from your host into the Docker container. 
 ### example: /home/samy/nginx:/home/nginx (bind mount)
+
 #### 1-crate a directory and file iti.txt in it 
 ```bash
 mkdir nginx_bindMount
@@ -18,8 +19,8 @@ docker run -d --name nginx_bindMount -v /root/nginx_bindMount:/usr/share/nginx/h
 docker exec -it nginx_bindMount bash
 cd /usr/share/nginx/html/
 ls
+we find iti.txt present indicating that it is mounted into the container
 ```
-#### we find iti.txt present 
 
 
 ## Task 2
@@ -63,25 +64,25 @@ the ping fails because the two containers are in different networks.
 ```bash
 docker exec -t nginx-1 bash
 ping 172.18.0.03
-the ping is successful because the two containers are in different networks.
+the ping is successful because the two containers are in the same networks.
 ```
 
 
-##Task 3 Explain the difference between Docker volumes and Bind Mount.Explain the difference between Docker volumes and Bind Mount.
 
-#### Docker volumes
-1-It is stored within a directory on the Docker host.
-2-Managed by Docker and are isolated from the core
-3-functionality of the host machine.
-4-Can be mounted into multiple containers simultaneously.
-5-Deleting a container does not delete the volume
+## Task 3 Explain the difference between Docker volumes and Bind Mount.Explain the difference between Docker volumes and Bind Mount.
 
-#### Bind Mount
-1- Bind mounts have limited functionality compared to volumes.
-2-When you use a bind mount, a file or directory on the host machine is
-mounted into a container.
-3-The file or directory is referenced by its full path on the host machine.
-4-It is created on demand if it does not yet exist.
-5-You can’t use Docker CLI commands to directly manage bind mounts.
+### Docker volumes
+#### 1-It is stored within a directory on the Docker host.
+#### 2-Managed by Docker and are isolated from the core
+#### 3-functionality of the host machine.
+#### 4-Can be mounted into multiple containers simultaneously.
+#### 5-Deleting a container does not delete the volume
+
+### Bind Mount
+#### 1- Bind mounts have limited functionality compared to volumes.
+#### 2-When you use a bind mount, a file or directory on the host machine is mounted into a container.
+#### 3-The file or directory is referenced by its full path on the host machine.
+#### 4-It is created on demand if it does not yet exist.
+#### 5-You can’t use Docker CLI commands to directly manage bind mounts.
 
 
