@@ -22,6 +22,7 @@ ls
 we find iti.txt present indicating that it is mounted into the container
 ```
 
+---
 
 ## Task 2
 #### 1-Create 2 docker network (net-1 & net-2)
@@ -67,10 +68,9 @@ ping 172.18.0.03
 the ping is successful because the two containers are in the same networks.
 ```
 
-
+---
 
 ## Task 3 Explain the difference between Docker volumes and Bind Mount.Explain the difference between Docker volumes and Bind Mount.
-
 
 ### Docker volumes
 #### 1-It is stored within a directory on the Docker host.
@@ -78,7 +78,6 @@ the ping is successful because the two containers are in the same networks.
 #### 3-functionality of the host machine.
 #### 4-Can be mounted into multiple containers simultaneously.
 #### 5-Deleting a container does not delete the volume
-
 
 
 ### Bind Mount
